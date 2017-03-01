@@ -12,7 +12,6 @@
 \ProcessOptions
 
 % ----- Packages --------------------------------------------------------------
-
 % Better fonts with accents
 \RequirePackage[T1]{fontenc}
 
@@ -48,12 +47,15 @@
 % Links
 \RequirePackage{hyperref}
 
+\RequirePackage{xepersian}
+\settextfont{IRZar}
+
 % ----- Questions -------------------------------------------------------------
 \newcounter{questionCounter}
 \newcounter{partCounter}[questionCounter]
 
 % Prefix for questions
-\newcommand{\questiontype}[0]{Question}
+\newcommand{\questiontype}[0]{سؤال}
 
 % Use this if your "written" questions are all under one section
 % For example, if the homework handout has Section 5: Written Questions
@@ -124,9 +126,9 @@
   \begin{description}
 }{\end{description}}
 
-\newcommand{\basecase}{\item[Base Case]\mbox{}\\}
-\newcommand{\indhyp}{\item[Induction Hypothesis]\mbox{}\\}
-\newcommand{\indstep}{\item[Induction Step]\mbox{}\\}
+\newcommand{\basecase}{\item[پایه استقرا]\mbox{}\\}
+\newcommand{\indhyp}{\item[فرض استقرا]\mbox{}\\}
+\newcommand{\indstep}{\item[گام استقرا]\mbox{}\\}
 
 % ----- Answer Box ------------------------------------------------------------
 
@@ -154,8 +156,8 @@
     % Setup header
     \setlength{\headheight}{15.2pt}
     \setlength{\headsep}{0.2in}
-    \lhead{\hwclass{} \hwlecture\hwsection}%
-    \chead{\hwname{} (\hwemail)}%
+    \lhead{\hwclass{}}%
+    \chead{\hwname{} (ش.د.\hwsn)}%
     \rhead{\hwtype{} \hwnum}%
 
     % Setup hrule in header
@@ -166,9 +168,9 @@
     \thispagestyle{plain}
 
     \begin{center}
-      {\Large \hwclass{} \hwtype{} \hwnum}
+      {\Large \hwclass{}، \hwtype{} \hwnum}
 
-      \hwname{} (\hwemail)
+      \hwname{} (ش.د.\hwsn)
 
       \today
     \end{center}
@@ -185,7 +187,7 @@
     \begin{center}
       {\Large \hwclass{} \hwtype{} \hwnum}
 
-      \hwname{} (\hwemail)
+      \hwname{} (ش.د.\hwsn)
 
       \today
     \end{center}
