@@ -47,7 +47,7 @@
 % Links
 \RequirePackage{hyperref}
 
-\RequirePackage{xepersian}
+\RequirePackage[extrafootnotefeatures]{xepersian}
 \settextfont{IRZar}
 
 % ----- Questions -------------------------------------------------------------
